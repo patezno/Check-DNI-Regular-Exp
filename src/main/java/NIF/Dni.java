@@ -1,5 +1,8 @@
 package NIF;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Dni extends Nif {
 
     // Atributos
@@ -20,6 +23,27 @@ public class Dni extends Nif {
 
     public String getDni() {
         return super.getNif();
+    }
+
+    // Metodos
+
+    public Boolean checkDni(String dni) {
+
+        Boolean checker = false;
+
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(dni);
+
+        while (m.find()) {
+            for (TablaAsignacion letra : TablaAsignacion.values()) {
+                if (m.group().equals(letra.getValor())) {
+                    checker = true;
+                } else {
+                    checker = false;
+                }
+            }
+        }
+        return checker;
     }
 
 }

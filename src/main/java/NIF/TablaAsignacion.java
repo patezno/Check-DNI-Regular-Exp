@@ -8,16 +8,29 @@ public enum TablaAsignacion {
 
     // Enum
 
-    T, R, W, A, G, M, Y, P, F, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E;
+    T("T"), R("R"), W("W"), A("A"), G("G"), M("M"), Y("Y"), P("P"),
+    F("F"), D("D"), X("X"), B("B"), N("N"), J("J"), Z("Z"), S("S"),
+    Q("Q"), V("V"), H("H"), L("L"), C("C"), K("K"), E("E");
 
     // Atributos
 
+    private String valor = null;
     private static final int size = TablaAsignacion.values().length;
+
+    // Constructor
+
+    TablaAsignacion(String valor) {
+        this.valor = valor;
+    }
 
     // Getters
 
     public static int getSize() {
         return size;
+    }
+
+    public String getValor() {
+        return valor;
     }
 
     // Metodos

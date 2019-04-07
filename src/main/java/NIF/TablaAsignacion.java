@@ -1,6 +1,8 @@
 package NIF;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public enum TablaAsignacion {
 
@@ -27,5 +29,14 @@ public enum TablaAsignacion {
 
     public static void showWords() {
         System.out.println(Arrays.toString(TablaAsignacion.values()));
+    }
+
+    public static TablaAsignacion getWord(int position) {
+
+        List<TablaAsignacion> tableValues = new ArrayList<>();
+
+        tableValues.addAll(Arrays.asList(TablaAsignacion.values()));
+
+        return tableValues.get(position);
     }
 }

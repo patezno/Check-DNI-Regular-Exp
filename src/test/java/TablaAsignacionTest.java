@@ -20,4 +20,10 @@ public class TablaAsignacionTest {
         TablaAsignacion.showWords();
     }
 
+    @Test
+    public void getWordTest() {
+        Assert.assertEquals(TablaAsignacion.A, TablaAsignacion.getWord(3));
+        Assert.assertEquals(TablaAsignacion.N, TablaAsignacion.getWord(12));
+    }
+
 }

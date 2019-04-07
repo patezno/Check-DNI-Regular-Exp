@@ -9,4 +9,10 @@ public class TablaAsignacionTest {
         Assert.assertTrue(TablaAsignacion.wordAllowed("R"));
         Assert.assertTrue(TablaAsignacion.wordAllowed("X"));
     }
+
+    @Test
+    public void showWordsTest() {
+        TablaAsignacion.showWords();
+    }
+
 }

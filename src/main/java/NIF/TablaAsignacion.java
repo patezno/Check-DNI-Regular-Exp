@@ -24,4 +24,8 @@ public enum TablaAsignacion {
         String tablaString = Arrays.toString(TablaAsignacion.values());
         return tablaString.contains(letra);
     }
+
+    public static void showWords() {
+        System.out.println(Arrays.toString(TablaAsignacion.values()));
+    }
 }
